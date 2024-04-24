@@ -1,0 +1,15 @@
+version: '3.7'
+services:
+  postgres:
+    image: postgres:13
+    container_name: um_db
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_DB: um_db
+      POSTGRES_USER: um_user
+      POSTGRES_PASSWORD: BDGvMR9fd7psXKVJ
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+volumes:
+  postgres_data:
