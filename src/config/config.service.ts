@@ -32,7 +32,7 @@ class ConfigService {
     public getJwtExpirationTime() {
         const expirationTime = this.getValue('JWT_EXPIRATION_TIME', false);
         if (!expirationTime) {
-            return '60s';
+            return '60m';
         }
         return expirationTime;
     }
